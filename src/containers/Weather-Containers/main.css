@@ -1,0 +1,33 @@
+.weather-block {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 0px;
+  overflow: hidden;
+  display: flex;
+  background-color: #ee6e73;
+}
+.weather-block div {
+  /* border: 1px solid; */
+}
+.info-wet-block {
+  background-image: url('https://itproger.com/img/courses/1538665284.jpg');
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: left;
+  background-size: cover;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding-top: 17%;
+}
+.info-wet-block .info {
+  color: #fff;
+  font-size: 21px;
+}
+.func-wet-block {
+  width: 60%;
+  padding: 20px;
+}

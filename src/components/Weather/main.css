@@ -1,0 +1,12 @@
+.weather-card {
+  transition: all 0.4s ease-in-out 0s;
+  opacity: 0.1;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 2px;
+}
+
+.weather-card.show {
+  opacity: 1;
+}

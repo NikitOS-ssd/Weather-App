@@ -1,0 +1,19 @@
+form {
+  width: 80%;
+}
+input {
+  padding-left: 0px !important;
+  color: #fff;
+  font-size: 20px !important;
+  border-bottom: 1px solid #fff !important;
+  height: 1.9rem !important;
+}
+button {
+  padding: 0px 10px;
+  border: none;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+button:active {
+  background-color: ;
+}

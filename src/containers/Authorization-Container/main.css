@@ -1,0 +1,20 @@
+.authorization-block {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  box-sizing: content-box;
+}
+.authorization-block input {
+  width: 37% !important;
+  display: block;
+  color: black;
+}
+.authorization-block button {
+  display: inline-block;
+  margin-top: 10px;
+}
+.register-button {
+  margin-left: 10px;
+}
