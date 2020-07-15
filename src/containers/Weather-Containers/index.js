@@ -37,8 +37,8 @@ class WeatherContainer extends Component {
 
     } else {
       city = city.value;
-      
-      const api_url = await fetch(`https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${city}`)
+
+      await fetch(`https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${city}`)
         .then(res => res.json())
         .then(result => {
           data = result;

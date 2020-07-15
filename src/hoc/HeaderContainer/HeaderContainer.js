@@ -21,14 +21,15 @@ class Header extends Component {
           <div className="nav-wrapper">
             <NavLink to="/"><p className="brand-logo">Weather App</p></NavLink>
             <ul id="nav-mobile" className="right">
-              <li><NavLink to="#" onClick={visibleFunc}> Sass </NavLink></li>
-              <li><NavLink to="/authorization" className="a-navlink"> Components </NavLink></li>
+              <li style={{display: 'none'}}><NavLink to="#" onClick={visibleFunc}> Sass </NavLink></li>
+              <li style={{display: 'none'}}><NavLink to="/authorization" className="a-navlink"> Components </NavLink></li>
               <li><NavLink to="/javascript" className="a-navlink"> JavaScript </NavLink></li>
+              <li><NavLink to="/dragdrop" className="a-navlink"> Drag&Drop </NavLink></li>
 
               {
                 this.state.registr
-                ? <button className="registration-button"><NavLink to="/error404">Login</NavLink></button>
-                : null
+                ? <img src="https://image.flaticon.com/icons/png/512/126/126258.png" className="avatar-image" alt=""/>
+                : <button className="registration-button"><NavLink to="/error404">Login</NavLink></button>
               }
             </ul>
           </div>

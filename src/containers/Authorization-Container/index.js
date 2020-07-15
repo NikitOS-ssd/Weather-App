@@ -30,7 +30,10 @@ class Authorization extends Component {
     const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDiW-wQz7wYLVBZt2pjsJD7HufR7Nqb5qM`, {
       method: 'POST',
       body: JSON.stringify(authData)
-    }).then(res => res.json())
+    }).then(res => {
+      document.location.replace('http://localhost:3001')
+      res.json()
+    })
       .catch(err => err);
 
     console.log(response);
