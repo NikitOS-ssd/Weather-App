@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import './main.css'
 
 
@@ -13,7 +13,7 @@ const Weather = (props) => {
   return (
     <div className={cls.join(' ')}>
       {city ?
-        <Fragment>
+        <>
           <p>Страна: {country}</p>
           <p>Город: {city}</p>
           <p>Температура: {temp}</p>
@@ -21,7 +21,7 @@ const Weather = (props) => {
           <p>Скорость ветра в м/ч: {wind}</p>
           <p>Влажность: {humidity}</p>
           <p>Облачность: {cloud}</p>
-        </Fragment>
+        </>
         : <p>{error}</p>
       }
 

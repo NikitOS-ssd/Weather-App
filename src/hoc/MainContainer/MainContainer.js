@@ -7,7 +7,7 @@ class MainContainer extends Component {
     var {visible} = this.props;
 
     //вызов функции извне
-    // firstFunctionForComponent();
+    firstFunctionForComponent();
 
     //изменение стиля видимости взависимости от принятого props
     var cls = [];
@@ -27,11 +27,11 @@ class MainContainer extends Component {
 }
 
 //Простая функция поиска данных из БД Firebase
-// function firstFunctionForComponent() {
-//   fetch('https://weather-app-bf1fd.firebaseio.com/users.json')
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-//     .catch(err => console.log('Error ', err));
-// }
+function firstFunctionForComponent() {
+  fetch('https://weather-app-bf1fd.firebaseio.com/users.json')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log('Error ', err));
+}
 
 export default MainContainer

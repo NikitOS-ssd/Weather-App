@@ -5,7 +5,7 @@ import './DragnDrop.css'
 var jobTask = {
   planned: [{name: '#name1', info: 'Lorem ipsum dolor sit amet, consectetur adipisicing.'}, {name: 'create repository', info: 'Lorem ipsum dolor sit amet, consectetur adipisicing.'}],
   indev: [{name: '#found capital investor', info: 'Lorem ipsum dolor sit amet.'}],
-  qa: [],
+  qa: [{name: '#create server', info: 'Lorem ipsum dolor sit amet'}],
   production: []
 };
 

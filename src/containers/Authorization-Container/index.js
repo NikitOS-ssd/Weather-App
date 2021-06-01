@@ -4,8 +4,8 @@ import './main.css'
 
 class Authorization extends Component {
   state = {
-    login: '',
-    password: undefined
+    login: null,
+    password: null
   }
 
   loginInputFunc(event) {
@@ -19,8 +19,6 @@ class Authorization extends Component {
     this.setState({ password });
   }
 
-
-
   async loginHandler() {
     const authData = {
       email: this.state.login,
@@ -31,7 +29,7 @@ class Authorization extends Component {
       method: 'POST',
       body: JSON.stringify(authData)
     }).then(res => {
-      document.location.replace('http://localhost:3001')
+      document.location.replace('http://localhost:3000')
       res.json()
     })
       .catch(err => err);
@@ -47,6 +45,7 @@ class Authorization extends Component {
     localStorage.setItem('localId', response.localId);
     console.log(localStorage);
   }
+
   async registerHandler() {
     const authData = {
       email: this.state.login,
@@ -61,7 +60,6 @@ class Authorization extends Component {
 
     console.log(response);
   }
-
 
   render() {
     return (

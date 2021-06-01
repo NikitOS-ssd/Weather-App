@@ -11,7 +11,7 @@ import DragnDrop from './containers/DragnDrop/DragnDrop.js'
 class App extends Component {
   state = {
     visible: true,
-    authorisation: undefined
+    authorisation: true
   }
 
   visibleFunc(e) {
@@ -31,7 +31,6 @@ class App extends Component {
         this.setState({authorisation: true});
       }
     } else {
-      // console.log('Error');
       if(this.state.authorisation) {
         this.setState({authorisation: false});
       }
@@ -39,39 +38,28 @@ class App extends Component {
   }
 
   render() {
-    // Вариант создание логики и шаблона до самого рендеринга
-    // var mainBlock;
-    // if(this.state.authorisation) {
-    //   mainBlock = (
-    //     <Switch>
-    //       <Route exact path="/" component={WeatherContainer} />
-    //       <Route path="/authorization" component={AuthorizationContainer}/>
-    //       <Route path="/dragdrop" component={DragnDrop} />
-    
-    //       <Route render={ () => <h1>404 Error</h1> }/>
-    //     </Switch>
-    //   );
-    // } else {
-    //   mainBlock = (
-    //     <AuthorizationContainer />
-    //   );
-    // }
-    // console.log(mainBlock);
     return (
       <Fragment>
         <Header visibleFunc={this.visibleFunc.bind(this)} />
         <MainContainer visible={this.state.visible}>
-          {
+          {/* {
             this.state.authorisation
             ? <Switch>
-              <Route exact path="/" component={WeatherContainer} />
-              <Route path="/authorization" component={AuthorizationContainer}/>
-              <Route path="/dragdrop" component={DragnDrop} />
+                <Route exact path="/" component={WeatherContainer} />
+                <Route path="/authorization" component={AuthorizationContainer}/>
+                <Route path="/dragdrop" component={DragnDrop} />
 
-              <Route render={ () => <h1>404 Error</h1> }/>
-            </Switch>
+                <Route render={ () => <h1>404 Error</h1> }/>
+              </Switch>
             : <AuthorizationContainer />
-          }
+          } */}
+          <Switch>
+            <Route exact path="/" component={WeatherContainer} />
+            <Route path="/authorization" component={AuthorizationContainer}/>
+            <Route path="/dragdrop" component={DragnDrop} />
+
+            <Route render={ () => <h1>404 Error</h1> }/>
+          </Switch>
         </MainContainer>
       </Fragment>
 

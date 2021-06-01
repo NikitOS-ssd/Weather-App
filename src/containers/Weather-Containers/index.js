@@ -21,7 +21,6 @@ class WeatherContainer extends Component {
     }
   }
 
-
   gettingWeather = async (event) => {
     event.preventDefault();
     var data;
