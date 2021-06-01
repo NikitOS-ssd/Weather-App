@@ -19,12 +19,12 @@ class Header extends Component {
       <header>
         <nav style={navStyle}>
           <div className="nav-wrapper">
-            <NavLink to="/"><p className="brand-logo">Weather App</p></NavLink>
+            <NavLink to="/"><p className="brand-logo">Corp Task Manager</p></NavLink>
             <ul id="nav-mobile" className="right">
               <li style={{display: 'none'}}><NavLink to="#" onClick={visibleFunc}> Sass </NavLink></li>
               <li style={{display: 'none'}}><NavLink to="/authorization" className="a-navlink"> Components </NavLink></li>
               <li><NavLink to="/javascript" className="a-navlink"> JavaScript </NavLink></li>
-              <li><NavLink to="/dragdrop" className="a-navlink"> Drag&Drop </NavLink></li>
+              <li><NavLink to="/dragdrop" className="a-navlink"> Task Manager </NavLink></li>
 
               {
                 this.state.registr

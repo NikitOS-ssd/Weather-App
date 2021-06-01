@@ -53,6 +53,18 @@ class DragnDrop extends Component {
     this.setState({tasks});
   }
 
+  ddd() {
+    const tasks = {...jobTask};
+      const nameTask = prompt('Введите название задачи', '');
+      const descriptionTask = prompt('Введите содержание задачи', '');
+  
+      const obj = {
+        name: nameTask,
+        info: descriptionTask
+      }
+    tasks.planned.push(obj);
+    this.setState({tasks});
+  }
 
   render() {
     var tasks = {...this.state.tasks};
@@ -73,9 +85,30 @@ class DragnDrop extends Component {
 
     console.log(this.state.tasks);
 
+    function addTask() {
+      const newTasks = {...tasks};
+      console.log(newTasks);
+      const nameTask = prompt('Введите название задачи', '');
+      const descriptionTask = prompt('Введите содержание задачи', '');
+  
+      const obj = {
+        name: nameTask,
+        info: descriptionTask
+      }
+  
+      // const newTasks = {...this.state.tasks};
+      newTasks.planned.push(obj);
+      console.log(newTasks);
+      this.setState({tasks: newTasks});
+    }
+
     return (
       <div className="hero">
-        <h2>Drag Drop</h2>
+        {/* <h2>Drag Drop</h2> */}
+        <button class="btn waves-effect waves-light" type="submit" name="action" onClick={this.ddd}>
+          Добавить задачу
+    {/* <i class="material-icons right">send</i> */}
+  </button>
         <div className="wrapper">
           <ul className="list">
             <li className="list__caption">Planned</li>
